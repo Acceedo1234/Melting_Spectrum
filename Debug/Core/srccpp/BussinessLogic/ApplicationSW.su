@@ -1,0 +1,4 @@
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:42:1:BusinessLogic::BusinessLogic()	16	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:47:1:BusinessLogic::~BusinessLogic()	16	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:47:1:virtual BusinessLogic::~BusinessLogic()	16	static
+../Core/srccpp/BussinessLogic/ApplicationSW.cpp:51:6:void BusinessLogic::run()	16	static
