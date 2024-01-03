@@ -258,6 +258,7 @@ int8_t connect(uint8_t sn, uint8_t * addr, uint16_t port)
 {
    CHECK_SOCKNUM();
    CHECK_SOCKMODE(Sn_MR_TCP);
+   setSn_CR(sn,Sn_CR_OPEN);
    CHECK_SOCKINIT();
    //M20140501 : For avoiding fatal error on memory align mismatched
    //if( *((uint32_t*)addr) == 0xFFFFFFFF || *((uint32_t*)addr) == 0) return SOCKERR_IPINVALID;

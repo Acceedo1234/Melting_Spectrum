@@ -2,7 +2,7 @@ Core/srccpp/DisplayCPP/DisplayRoutine.o: \
  ../Core/srccpp/DisplayCPP/DisplayRoutine.cpp \
  ../Core/srccpp/DisplayCPP/DisplayRoutine.h \
  ../Core/srccpp/DisplayCPP/GLCD.h \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/Common/common.h \
+ D:/SourceTree/melting_spectrum/Core/srccpp/Common/common.h \
  ../Core/Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -37,7 +37,7 @@ Core/srccpp/DisplayCPP/DisplayRoutine.o: \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
 ../Core/srccpp/DisplayCPP/DisplayRoutine.h:
 ../Core/srccpp/DisplayCPP/GLCD.h:
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/Common/common.h:
+D:/SourceTree/melting_spectrum/Core/srccpp/Common/common.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:

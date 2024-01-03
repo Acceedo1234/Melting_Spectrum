@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include "httpClient.h"
 #include "Struct_Input_output.h"
-
+#include <string.h>
 
 
 #define SOCK_DHCP               3
@@ -275,7 +275,7 @@ void initializeHttp(void)
 	Domain_IP[2] = Ip_config_Server[2];
 	Domain_IP[3] = Ip_config_Server[3];
 
- 	httpc_init(0, Domain_IP, 9006, g_send_buf, g_recv_buf);
+ 	httpc_init(0, Domain_IP, 9011, g_send_buf, g_recv_buf);
 }
 
 void ethernetHTTPRoutine(void)
@@ -300,16 +300,16 @@ void ethernetHTTPRoutine(void)
 				st=1;
 			break;
 			case 1://dummy furnace
-				SelectFurnace=5;
+				SelectFurnace=2;
 				st=2;
 			break;
 			case 2:
-				SelectFurnace=2;
+				SelectFurnace=3;
 				st=3;
 			break;
 			case 3://dummy furnace
-				SelectFurnace=5;
-				st=4;
+				SelectFurnace=4;
+				st=0;
 			break;
 			case 4:
 				SelectFurnace=3;
@@ -331,17 +331,17 @@ void ethernetHTTPRoutine(void)
 			break;
 		}
 		//SelectFurnace=4;
-		if(SelectFurnace == 10)
+		if(SelectFurnace == 5)
 		{
 			memset(loc_spectrumresult, 0, 550);
 			memcpy(loc_spectrumresult,&SpectrumResult_furnace[SelectFurnace-1].result_spectrum[0],500);
-			sprintf(URI,"http://isc1-melt.acceedo.in:9006/spectrumResult?d=%.*s",418,loc_spectrumresult);
+			sprintf(URI,"http://122.165.206.136:9011/spectrumResult?d=%.*s",418,loc_spectrumresult);
 		}
 		else
 		{
 			memset(loc_spectrumresult, 0, 550);
 			memcpy(loc_spectrumresult,&SpectrumResult_furnace[SelectFurnace-1].result_spectrum[0],500);
-			sprintf(URI,"http://isc1-melt.acceedo.in:9006/spectrumResult?d=%.*s",418,loc_spectrumresult);
+			sprintf(URI,"http://122.165.206.136:9011/spectrumResult?d=%.*s",418,loc_spectrumresult);
 		}
 
 		request.method = (uint8_t *)HTTP_GET;

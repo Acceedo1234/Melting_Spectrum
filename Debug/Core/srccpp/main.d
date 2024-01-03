@@ -1,5 +1,5 @@
 Core/srccpp/main.o: ../Core/srccpp/main.cpp \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/BussinessLogic/ApplicationSW.h \
+ D:/SourceTree/melting_spectrum/Core/srccpp/BussinessLogic/ApplicationSW.h \
  ../Core/Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -32,15 +32,15 @@ Core/srccpp/main.o: ../Core/srccpp/main.cpp \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/DisplayCPP/GLCD.h \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/Common/common.h \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/Modbus/Modbusrtu.h \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/DisplayCPP/DisplayRoutine.h \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/DisplayCPP/GLCD.h \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/OfflineStorage/OfflineStorage.h \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/WifiEsp8266/ESP8266.h \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/Shift/SHIFT.h
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/BussinessLogic/ApplicationSW.h:
+ D:/SourceTree/melting_spectrum/Core/srccpp/DisplayCPP/GLCD.h \
+ D:/SourceTree/melting_spectrum/Core/srccpp/Common/common.h \
+ D:/SourceTree/melting_spectrum/Core/srccpp/Modbus/Modbusrtu.h \
+ D:/SourceTree/melting_spectrum/Core/srccpp/DisplayCPP/DisplayRoutine.h \
+ D:/SourceTree/melting_spectrum/Core/srccpp/DisplayCPP/GLCD.h \
+ D:/SourceTree/melting_spectrum/Core/srccpp/OfflineStorage/OfflineStorage.h \
+ D:/SourceTree/melting_spectrum/Core/srccpp/WifiEsp8266/ESP8266.h \
+ D:/SourceTree/melting_spectrum/Core/srccpp/Shift/SHIFT.h
+D:/SourceTree/melting_spectrum/Core/srccpp/BussinessLogic/ApplicationSW.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -74,11 +74,11 @@ D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/Bussiness
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/DisplayCPP/GLCD.h:
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/Common/common.h:
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/Modbus/Modbusrtu.h:
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/DisplayCPP/DisplayRoutine.h:
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/DisplayCPP/GLCD.h:
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/OfflineStorage/OfflineStorage.h:
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/WifiEsp8266/ESP8266.h:
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/Shift/SHIFT.h:
+D:/SourceTree/melting_spectrum/Core/srccpp/DisplayCPP/GLCD.h:
+D:/SourceTree/melting_spectrum/Core/srccpp/Common/common.h:
+D:/SourceTree/melting_spectrum/Core/srccpp/Modbus/Modbusrtu.h:
+D:/SourceTree/melting_spectrum/Core/srccpp/DisplayCPP/DisplayRoutine.h:
+D:/SourceTree/melting_spectrum/Core/srccpp/DisplayCPP/GLCD.h:
+D:/SourceTree/melting_spectrum/Core/srccpp/OfflineStorage/OfflineStorage.h:
+D:/SourceTree/melting_spectrum/Core/srccpp/WifiEsp8266/ESP8266.h:
+D:/SourceTree/melting_spectrum/Core/srccpp/Shift/SHIFT.h:

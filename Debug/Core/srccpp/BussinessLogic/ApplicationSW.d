@@ -33,7 +33,7 @@ Core/srccpp/BussinessLogic/ApplicationSW.o: \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/BussinessLogic/ApplicationSW.h \
+ D:/SourceTree/melting_spectrum/Core/srccpp/BussinessLogic/ApplicationSW.h \
  ../Core/Inc/main.h
 ../Core/Inc/Struct_Input_output.h:
 ../Core/Inc/main.h:
@@ -69,5 +69,5 @@ Core/srccpp/BussinessLogic/ApplicationSW.o: \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-D:/PROGRAM/Naveen/melting/Spectrumresult_16_12_23\ -\ Copy/Core/srccpp/BussinessLogic/ApplicationSW.h:
+D:/SourceTree/melting_spectrum/Core/srccpp/BussinessLogic/ApplicationSW.h:
 ../Core/Inc/main.h:

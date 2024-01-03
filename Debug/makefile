@@ -91,8 +91,8 @@ all: main-build
 main-build: spectrumresult.elf secondary-outputs
 
 # Tool invocations
-spectrumresult.elf spectrumresult.map: $(OBJS) $(USER_OBJS) D:\PROGRAM\Naveen\melting\Spectrumresult_16_12_23\ -\ Copy\STM32L433RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "spectrumresult.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\PROGRAM\Naveen\melting\Spectrumresult_16_12_23 - Copy\STM32L433RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="spectrumresult.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+spectrumresult.elf spectrumresult.map: $(OBJS) $(USER_OBJS) D:\SourceTree\melting_spectrum\STM32L433RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "spectrumresult.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\SourceTree\melting_spectrum\STM32L433RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="spectrumresult.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

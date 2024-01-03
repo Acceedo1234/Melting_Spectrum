@@ -22,8 +22,8 @@ uint8_t * httpc_recv_buf;
 HttpRequest request = HttpRequest_get_initializer;
 
 static int8_t httpsock = 0;
-static uint8_t dest_ip[4] = {52,184,16,136}; //52.184.16.136
-static uint16_t dest_port =9006;
+static uint8_t dest_ip[4] = {122,165,206,0}; //52.184.16.136
+static uint16_t dest_port =9011;
 static uint16_t httpc_any_port = 0;
 
 uint8_t httpc_isSockOpen = HTTPC_FALSE;
@@ -34,10 +34,11 @@ uint16_t valhttp;
 uint8_t rxBufhttp[2048];
 uint8_t *startPosition;
 uint8_t filtereddata[200];
-
+int8_t checkret;
 uint32_t heatnumber;
 uint16_t rxType,furnace;
 uint16_t rxReqCarbon,rxReqSilica,rxReqMn,rxReqCu,rxReqSn,rxReqZn;
+int32_t http_send_status;
 /* Private functions prototypes ----------------------------------------------*/
 uint16_t get_httpc_any_port(void);
 /*
@@ -159,7 +160,7 @@ uint8_t httpc_connect()
 		if(httpc_isSockOpen == HTTPC_TRUE)
 		{
 			// TCP connect
-			ret = connect(httpsock, dest_ip, dest_port);
+			ret = checkret = connect(httpsock, dest_ip, dest_port);
 			if(ret == SOCK_OK) ret = HTTPC_TRUE;
 		}
 	}
@@ -330,7 +331,7 @@ uint16_t httpc_send(HttpRequest * req, uint8_t * buf, uint8_t * body, uint16_t c
 		for(i = 0; i < len; i++) printf("%c", buf[i]);
 		printf("\r\n");
 #endif
-		send(httpsock, buf, len);
+		http_send_status = send(httpsock, buf, len);
 	}
 	else
 	{
