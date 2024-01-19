@@ -31,6 +31,8 @@ uint8_t No_Of_Furnace;
 uint8_t Ip_config_Ip[4],Ip_Config_Subnet[4],Ip_config_gateway[4],Ip_config_DNS[4],Ip_config_Server[4];
 uint8_t Update_Dwin_Set_Data;
 uint16_t Ip_config_Server_Port;
+uint16_t Ip_config_Server_Port_K1;
+uint8_t No_Of_Meter_K1,No_Of_Meter;
 
 uint8_t TxSeqComplete;
 Modbusrtu::Modbusrtu() {
@@ -108,35 +110,73 @@ void Modbusrtu::dwinDecoder(void)
 
 	if(Rx_Dwin_Data_Buff[43] !=0 )
 	{
+		for(d=0,x=1;d<=3;d++,x=x+2)
+		{
+			if(Ip_config_Ip[d]!=Rx_Dwin_Data_Buff[x])
+			{
+				Update_Dwin_Set_Data =1;
+			}
+		}
 		Ip_config_Ip[0] = Rx_Dwin_Data_Buff[1];
 		Ip_config_Ip[1] = Rx_Dwin_Data_Buff[3];
 		Ip_config_Ip[2] = Rx_Dwin_Data_Buff[5];
 		Ip_config_Ip[3] = Rx_Dwin_Data_Buff[7];
-
+		for(d=0,x=9;d<=3;d++,x=x+2)
+		{
+			if(Ip_Config_Subnet[d]!=Rx_Dwin_Data_Buff[x])
+			{
+				Update_Dwin_Set_Data =1;
+			}
+		}
 		Ip_Config_Subnet[0] = Rx_Dwin_Data_Buff[9];
 		Ip_Config_Subnet[1] = Rx_Dwin_Data_Buff[11];
 		Ip_Config_Subnet[2] = Rx_Dwin_Data_Buff[13];
 		Ip_Config_Subnet[3] = Rx_Dwin_Data_Buff[15];
-
+		for(d=0,x=17;d<=3;d++,x=x+2)
+		{
+			if(Ip_config_gateway[d]!=Rx_Dwin_Data_Buff[x])
+			{
+				Update_Dwin_Set_Data =1;
+			}
+		}
 		Ip_config_gateway[0] = Rx_Dwin_Data_Buff[17];
 		Ip_config_gateway[1] = Rx_Dwin_Data_Buff[19];
 		Ip_config_gateway[2] = Rx_Dwin_Data_Buff[21];
 		Ip_config_gateway[3] = Rx_Dwin_Data_Buff[23];
-
+		for(d=0,x=25;d<=3;d++,x=x+2)
+		{
+			if(Ip_config_DNS[d]!=Rx_Dwin_Data_Buff[x])
+			{
+				Update_Dwin_Set_Data =1;
+			}
+		}
 		Ip_config_DNS[0] = Rx_Dwin_Data_Buff[25];
 		Ip_config_DNS[1] = Rx_Dwin_Data_Buff[27];
 		Ip_config_DNS[2] = Rx_Dwin_Data_Buff[29];
 		Ip_config_DNS[3] = Rx_Dwin_Data_Buff[31];
-
+		for(d=0,x=33;d<=3;d++,x=x+2)
+		{
+			if(Ip_config_Server[d]!=Rx_Dwin_Data_Buff[x])
+			{
+				Update_Dwin_Set_Data =1;
+			}
+		}
 		Ip_config_Server[0] = Rx_Dwin_Data_Buff[33];
 		Ip_config_Server[1] = Rx_Dwin_Data_Buff[35];
 		Ip_config_Server[2] = Rx_Dwin_Data_Buff[37];
 		Ip_config_Server[3] = Rx_Dwin_Data_Buff[39];
-
-		Ip_config_Server_Port = ((Rx_Dwin_Data_Buff[40]<<8)|(Rx_Dwin_Data_Buff[41]));
-
-		No_Of_Furnace 		= Rx_Dwin_Data_Buff[43];
-		Update_Dwin_Set_Data =1;
+		Ip_config_Server_Port_K1 = ((Rx_Dwin_Data_Buff[40]<<8)|(Rx_Dwin_Data_Buff[41]));
+		if(Ip_config_Server_Port != Ip_config_Server_Port_K1)
+		{
+			Ip_config_Server_Port = Ip_config_Server_Port_K1;
+			Update_Dwin_Set_Data =1;
+		}
+		No_Of_Meter_K1 		= Rx_Dwin_Data_Buff[43];
+		if(No_Of_Meter != No_Of_Meter_K1)
+		{
+			No_Of_Meter 		= No_Of_Meter_K1;
+			Update_Dwin_Set_Data =1;
+		}
 	}
 }
 //Hardware callback

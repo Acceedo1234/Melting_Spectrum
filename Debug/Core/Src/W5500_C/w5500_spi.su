@@ -8,4 +8,4 @@
 ../Core/Src/W5500_C/w5500_spi.c:185:6:wiz5500Init	40	static
 ../Core/Src/W5500_C/w5500_spi.c:243:6:processDHCP	16	static
 ../Core/Src/W5500_C/w5500_spi.c:271:6:initializeHttp	16	static
-../Core/Src/W5500_C/w5500_spi.c:281:6:ethernetHTTPRoutine	8	static
+../Core/Src/W5500_C/w5500_spi.c:286:6:ethernetHTTPRoutine	8	static

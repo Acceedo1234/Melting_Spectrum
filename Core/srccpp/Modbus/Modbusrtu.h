@@ -26,6 +26,9 @@ public:
 	uint8_t  noOfData;
 	uint8_t u8ModbusRegister[13];
 
+	uint8_t d;
+	uint8_t x;
+
 private:
 
 };

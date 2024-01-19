@@ -49,7 +49,7 @@ uint8_t dns_buffer [ 1024 ] ;
 uint8_t Domain_IP[4]  = {52,184,16,136};
 //uint8_t Domain_IP[4]  = {0,0,0,0};
 
-uint8_t Domain_name[] = "isc1-melt.acceedo.in";//
+uint8_t Domain_name[] = "52,184,16,136";//
 //uint8_t URI[] = "http://usm3-ht.acceedo.in:9005/set_temp?u=5&p=00000001&tm=0030&tl=0320&th=0030&h=030&l=080&ht=070&lt=080&rv=0130&bv=0650&yv=1230&rc=2705&bc=2909&yc=0500&k=203040&x=1";
 //uint8_t URI[] = "/search?ei=BkGsXL63AZiB-QaJ8KqoAQ&q=W6100&oq=W6100&gs_l=psy-ab.3...0.0..6208...0.0..0.0.0.......0......gws-wiz.eWEWFN8TORw";
 uint8_t URI[550];
@@ -275,6 +275,11 @@ void initializeHttp(void)
 	Domain_IP[2] = Ip_config_Server[2];
 	Domain_IP[3] = Ip_config_Server[3];
 
+	Domain_name[0] = Ip_config_Server[0];
+	Domain_name[1] = Ip_config_Server[1];
+	Domain_name[2] = Ip_config_Server[2];
+	Domain_name[3] = Ip_config_Server[3];
+
  	httpc_init(0, Domain_IP, 9011, g_send_buf, g_recv_buf);
 }
 
@@ -311,37 +316,21 @@ void ethernetHTTPRoutine(void)
 				SelectFurnace=4;
 				st=0;
 			break;
-			case 4:
-				SelectFurnace=3;
-				st=5;
-			break;
-			case 5://dummy furnace
-				SelectFurnace=5;
-				st=6;
-			break;
-			case 6:
-				SelectFurnace=4;
-				st=7;
-			break;
-			case 7:
-				SelectFurnace=5;
-				st=0;
-			break;
 			default:
+				SelectFurnace=1;
 			break;
 		}
-		//SelectFurnace=4;
 		if(SelectFurnace == 5)
 		{
 			memset(loc_spectrumresult, 0, 550);
 			memcpy(loc_spectrumresult,&SpectrumResult_furnace[SelectFurnace-1].result_spectrum[0],500);
-			sprintf(URI,"http://122.165.206.136:9011/spectrumResult?d=%.*s",418,loc_spectrumresult);
+			sprintf(URI,"/spectrumResult?d=%.*s",418,loc_spectrumresult);
 		}
 		else
 		{
 			memset(loc_spectrumresult, 0, 550);
 			memcpy(loc_spectrumresult,&SpectrumResult_furnace[SelectFurnace-1].result_spectrum[0],500);
-			sprintf(URI,"http://122.165.206.136:9011/spectrumResult?d=%.*s",418,loc_spectrumresult);
+			sprintf(URI,"/spectrumResult?d=%.*s",418,loc_spectrumresult);
 		}
 
 		request.method = (uint8_t *)HTTP_GET;
